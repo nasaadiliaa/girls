@@ -45,11 +45,11 @@ const NavbarComponents = () => {
                       <NavDropdown
                         title={link.text}
                         id={`${link.text.toLowerCase()}-dropdown`}>
-                        <NavDropdown.Item href="karir">Karir</NavDropdown.Item>
-                        <NavDropdown.Item href="kesehatan">Kesehatan</NavDropdown.Item>
-                        <NavDropdown.Item href="gaya-hidup">Gaya Hidup</NavDropdown.Item>
-                        <NavDropdown.Item href="hiburan">Hiburan</NavDropdown.Item>
-                        <NavDropdown.Item href="fashion&kecantikan">Fashion & Kecantikan</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/kategori/karir">Karir</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/kategori/kesehatan">Kesehatan</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/kategori/gaya-hidup">Gaya Hidup</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/kategori/hiburan">Hiburan</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to="/kategori/fashion-kecantikan">Fashion & Kecantikan</NavDropdown.Item>
                       </NavDropdown>
                     ) : (
                       <NavLink

@@ -4,9 +4,11 @@ import Navbar from './components/NavbarComponents';
 // import Footer from './components/Footer';
 
 import Homepage from './pages/Homepage';
-import Berita from './pages/Berita';
+import Terkini from './pages/Terkini';
 import Kategori from './pages/Kategori';
 import Author from './pages/Author';
+import BeritaDetail from './pages/BeritaDetail';
+
 
 function App() {
   return (
@@ -14,11 +16,14 @@ function App() {
         <Navbar/>
 
         <Routes>
-          <Route path="/" Component={Homepage} />
-          <Route path="/berita" Component={Berita} />
-          <Route path="/kategori-berita" Component={Kategori} />
-          <Route path="/author" Component={Author} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/terkini" element={<Terkini />} />
+          <Route path="/kategori/:slug" element={<Kategori />} />
+          <Route path="/author" element={<p>Silakan pilih author.</p>} />
+          <Route path="/author/:name" element={<Author />} />
+          <Route path="/berita/:slug" element={<BeritaDetail />} />
         </Routes>
+
 
         {/* <Footer/> */}
       </div>
