@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import bgBerita from '../assets/img/bg.png';
+import './BeritaDetail.css';
 
 const BeritaDetail = () => {
   const { slug } = useParams();
@@ -14,17 +16,20 @@ const BeritaDetail = () => {
   if (!berita) return <p>Loading...</p>;
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-2">{berita.title}</h1>
-      
-      {/* Menampilkan gambar thumbnail */}
-      <img
-        src={berita.thumbnail} // Gambar dari API
-        alt={berita.title}
-        className="w-full h-auto max-h-80 object-cover my-4 rounded"
-      />
-      
-      {/* Menampilkan konten berita */}
+    <div
+      className="berita-detail-container"
+      style={{ backgroundImage: `url(${bgBerita})` }}
+    >
+      <h1 className="berita-title">{berita.title}</h1>
+
+      <div className="berita-thumbnail-wrapper">
+        <img
+          src={berita.thumbnail}
+          alt={berita.title}
+          className="berita-thumbnail"
+        />
+      </div>
+
       <div dangerouslySetInnerHTML={{ __html: berita.content }} />
     </div>
   );

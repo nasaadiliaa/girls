@@ -20,20 +20,13 @@ const Homepage = () => {
               <button className="btn custom-lavender btn-lg rounded-1 me-2 mb-xs-0 mb-2" onClick={()=>navigate("/terkini")}>Baca Berita</button>
               <button className="btn custom-outline-lavender btn-lg rounded-1 mb-xs-0 mb-2" onClick={()=>navigate("/author")}>Lihat Author</button>
               </Col>
-              <Col lg="6" pt-lg-0 pt-5>
+              <Col lg="6" className="pt-lg-0 pt-5">
               <img src={HeroImage} alt="hero-img" />
               </Col>
-          </Row>
-          {/* <Row>
-            <Col className="text-center">
-            <button className="btn btn-success rounded-5 btn-lg" onClick={()=>navigate}>
 
-            </button>
-            </Col>
-          </Row> */}
+          </Row>
         </Container>
       </header>
-      {/* <div className="kelas w-100 min-vh-100"></div> */}
     </div>
   )
 }

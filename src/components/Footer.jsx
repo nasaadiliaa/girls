@@ -1,9 +1,11 @@
-const Footer = () => {
+import './Footer.css';
+
+function Footer() {
   return (
-    <div>
-      Footer
-    </div>
-  )
+    <footer className="footer">
+      <p>Copyright 2025 © GW - Girl'sWorld. All rights Reserved.</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

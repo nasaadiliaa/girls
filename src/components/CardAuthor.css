@@ -1,0 +1,37 @@
+.card-author {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-author-thumbnail {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-author-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-author-content {
+  font-size: 14px;
+  color: #333;
+}
+
+.card-author-button {
+  align-self: flex-start;
+  background-color: #800080; 
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 500;
+}

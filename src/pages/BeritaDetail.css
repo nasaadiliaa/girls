@@ -1,0 +1,27 @@
+.berita-detail-container {
+  padding: 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.berita-thumbnail-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.berita-thumbnail {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.berita-title {
+  font-size: 2rem; 
+  text-align: center;
+  font-weight: bold;
+  margin-top: 80px; 
+  margin-bottom: 2rem; 
+}

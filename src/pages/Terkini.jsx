@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import bgTerkini from '../assets/img/bg.png';
+import CardBerita from '../components/CardBerita';
+import './Terkini.css'; 
 
 const Terkini = () => {
   const [berita, setBerita] = useState([]);
@@ -12,25 +13,26 @@ const Terkini = () => {
   }, []);
 
   return (
-      <div className="flex justify-center items-center h-screen pt-5" style={{ backgroundImage: `url(${bgTerkini})` }}>
-      <h1 className="text-2xl font-bold text-center mb-4 pt-5">Berita Terkini</h1>
-      {berita.map((item) => (
-        <Link
-          to={`/berita/${item.slug}`}
-          key={item.id}
-          className="block mb-4 p-4 border rounded-lg shadow hover:bg-gray-50 transition"
-        >
-          {/* Menampilkan gambar thumbnail */}
-          <img
-            src={item.thumbnail} // Pastikan API mengirimkan URL gambar yang benar
-            alt={item.title}
-            className="w-full h-auto max-h-60 object-cover my-2 rounded"
+    <main
+      className="terkini-page"
+      style={{
+        backgroundImage: `url(${bgTerkini})`,
+      }}
+    >
+      <h1 className="terkini-title">Berita Terkini</h1>
+      <div className="terkini-grid">
+        {berita.map((item) => (
+          <CardBerita
+            key={item.id}
+            id={item.id}
+            thumbnail={item.thumbnail}
+            title={item.title}
+            content={item.content}
+            slug={item.slug}
           />
-          <h2 className="text-lg font-semibold">{item.title}</h2>
-          <p dangerouslySetInnerHTML={{ __html: item.content.substring(0, 100) + '...' }} />
-        </Link>
-      ))}
-    </div>
+        ))}
+      </div>
+    </main>
   );
 };
 
